@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+
+<body>
+<div class="header">
+    <p>
+    <h1>Регистрация</h1>
+    </p>
+</div>
+<div class="input">
+    <form method="post">
+        {% csrf_token %}
+        {{form.username}}<br>
+        {{form.email}}<br>
+        {{form.password1}}<br>
+        {{form.password2}}<br>
+        <input type="submit" value="Регистрация">
+    </form>
+</div>
+
+{% for message in messages %}
+<p type="messages" id="messages">{{message}}</p>
+{% endfor %}
+<br>
+
+Уже есть аккаунт? <a href="{% url 'login' %}" class="link">Войти</a>
+
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder = 'Имя пользователя...';
+    form_fields[2].placeholder = 'E-Mail...';
+    form_fields[3].placeholder = 'Пароль...';
+    form_fields[4].placeholder = 'Подтверждение пароля...';
+
+
+    for (var field in form_fields) {
+        form_fields[field].className += ' form-control'
+    }
+</script>
+</body>
+</html>

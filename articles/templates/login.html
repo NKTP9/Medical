@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h1>Вход на сайт</h1>
+<div class="input">
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Логин"> <br>
+        <input type="password" name="password" placeholder="Пароль"> <br>
+        {% for message in messages %}
+        <p type="messages" id="messages">{{message}}</p>
+        {% endfor %}
+        <input type="submit" value="Войти"><br>
+    </form>
+</div>
+<br>
+Не зарегистрированы? <a href="{% url 'register' %}" class="link">Регистрация</a><br>
+</body>
+</html>

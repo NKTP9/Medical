@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/create_post.css">
+    <title>Создание статьи</title>
+</head>
+
+<body>
+<div class="content">
+    {% load static %}
+    <h1>Написать статью</h1>
+    <form method="POST">{% csrf_token %}
+        <input type="text" name="title" placeholder="Название статьи" value="{{ form.title }}"><br>
+        <textarea name="text" placeholder="Текст статьи">{{ form.text }}</textarea><br>
+        <input type="submit" value="Сохранить"><br>
+    </form>
+    <div class="errors">{{ form.errors }}</div>
+</div>
+</body>
+
+</html>

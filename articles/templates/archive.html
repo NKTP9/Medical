@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/articles.css">
+    <title>Архив статей</title>
+</head>
+
+<body>
+<div class="header">
+    <p>
+        {% load static %}
+        <img src="{% static 'images/banner.jpg' %}"/><br>
+    </p>
+</div>
+<div class="links">
+    <p>
+        <a class="link" href="http://127.0.0.1:8000/login">Вход</a> <br>
+        <a class="link" href="http://127.0.0.1:8000/register">Регистрация</a><br>
+        <a class="link" href="http://127.0.0.1:8000/logout">Выйти</a><br>
+    </p>
+</div>
+    <div class="archive">
+        {% for post in posts %}
+            <div class="one-post">
+                <h2 class="post-title">
+                    <a href="http://127.0.0.1:8000/article/{{post.id}}">{{post.title}}</a>
+                </h2>
+                <div class="article-info">
+                    <div class="article-author">{{post.author.username}}</div>
+                    <div class="article-created-date">{{post.created_date}}</div>
+                </div>
+                <p class="article-text">{{post.text_excerpt}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
