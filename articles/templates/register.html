@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<ram>
 <div class="header">
     <p>
     <h1>Регистрация</h1>
@@ -20,6 +21,7 @@
         {{form.email}}<br>
         {{form.password1}}<br>
         {{form.password2}}<br>
+        <br>
         <input type="submit" value="Регистрация">
     </form>
 </div>
@@ -27,8 +29,8 @@
 {% for message in messages %}
 <p type="messages" id="messages">{{message}}</p>
 {% endfor %}
+</ram>
 <br>
-
 Уже есть аккаунт? <a href="{% url 'login' %}" class="link">Войти</a>
 
 <script>

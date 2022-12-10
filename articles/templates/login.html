@@ -7,18 +7,27 @@
     <title>Login</title>
 </head>
 <body>
-<h1>Вход на сайт</h1>
+<ram>
+<div style="float: left; padding-right: 5px; ">
+{% load static %}
+ <img src="{% static 'images/heal.png' %}"/>
+    </div>
+    <div style="float: left;">
+    <h1>Авторизуйтесь</h1>
+    </div>
 <div class="input">
     <form method="post">
         {% csrf_token %}
-        <input type="text" name="username" placeholder="Логин"> <br>
-        <input type="password" name="password" placeholder="Пароль"> <br>
+        <input type="text" name="username" placeholder="Введите ваш логин"> <br>
+        <input type="password" name="password" placeholder="Введите ваш пароль"> <br>
         {% for message in messages %}
         <p type="messages" id="messages">{{message}}</p>
         {% endfor %}
+    <br>
         <input type="submit" value="Войти"><br>
     </form>
 </div>
+</ram>
 <br>
 Не зарегистрированы? <a href="{% url 'register' %}" class="link">Регистрация</a><br>
 </body>
