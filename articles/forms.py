@@ -1,4 +1,3 @@
-from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
@@ -15,4 +14,4 @@ class UserForm(UserCreationForm):
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['passport_number', 'passport_series']
+        fields = ['passport_number', 'passport_series', 'patronymic', 'phone', 'policy', 'insurance_number']

@@ -17,13 +17,18 @@
 <div class="input">
     <form method="POST">
         {% csrf_token %}
-        {{user_form.as_p}}<br>
-{#        {{form.email}}<br>#}
-{#        {{form.password1}}<br>#}
-{#        {{form.password2}}<br>#}
-{#        {{form.last_name}}<br>#}
-{#        {{form.first_name}}<br>#}
-        {{profile_form.as_p}}<br>
+        {{user_form.username}}<br>
+        {{user_form.email}}<br>
+        {{user_form.password1}}<br>
+        {{user_form.password2}}<br>
+        {{user_form.last_name}}<br>
+        {{user_form.first_name}}<br>
+        {{profile_form.patronymic}}<br>
+        {{profile_form.passport_series}}<br>
+        {{profile_form.passport_number}}<br>
+        {{profile_form.phone}}<br>
+        {{profile_form.policy}}<br>
+        {{profile_form.insurance_number}}<br>
         <br>
         <input type="submit" value="Регистрация">
     </form>
@@ -44,6 +49,12 @@
     form_fields[4].placeholder = 'Подтверждение пароля...';
     form_fields[5].placeholder = 'Фамилия...';
     form_fields[6].placeholder = 'Имя...';
+    form_fields[7].placeholder = 'Отчество...';
+    form_fields[8].placeholder = 'Серия паспорта...';
+    form_fields[9].placeholder = 'Номер паспорта...';
+    form_fields[10].placeholder = 'Телефон...';
+    form_fields[11].placeholder = 'Номер полиса (16 цифр)...';
+    form_fields[12].placeholder = 'СНИЛС (13 цифр)...';
 
 
     for (var field in form_fields) {
