@@ -14,6 +14,14 @@ def archive(request):
 def main(request):
     return render(request, 'main.html')
 
+def profile(request):
+    return render(request, 'profile.html')
+
+def doctors(request):
+    return render(request, 'doctors.html')
+
+def hospitals(request):
+    return render(request, 'hospitals.html')
 
 def get_article(request, article_id):
     try:

@@ -3,22 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="/static/css/main.css">
   </head>
   <body>
+  <ups>
+  <div style="float: left; padding-right: 5px; ">
+{% load static %}
+ <img src="{% static 'images/heal32.png' %}"/>
+    </div>
+  </ups>
+  <br>
   <ram>
   <but>
-    <h1>Профиль</h1>
+    <a href="profile/" class="btn">Профиль</a>
+  </but>
+  <br>
+  <but>
+       <a href="doctors/" class="btn">Записаться к врачу</a>
 
   </but>
   <br>
   <but>
-    <h1>Записаться к врачу</h1>
-
-  </but>
-  <br>
-  <but>
-    <h1>Посмотреть поликлиники</h1>
+       <a href="hospitals/" class="btn">Посмотреть поликлиники</a>
 
   </but>
   </ram>

@@ -1,0 +1,124 @@
+body {
+    background: white;
+    font-family:  "Arial Unicode MS", sans-serif;
+    color: #e50b0b;
+    text-align:center;
+}
+
+
+ram {
+
+    background: #dadada;
+    border: 3px solid #dadada;
+    border-radius: 30px;
+    padding: 0px 5px;
+    display: inline-block;
+    margin: 10px;
+
+}
+
+but {
+
+    background: #ab9d9d;
+    border: 3px solid #ab9d9d;
+    border-radius: 30px;
+    padding: 0px 5px;
+    display: inline-block;
+    margin: 10px;
+    font-family:  "Arial Unicode MS", sans-serif;
+    color: #f7f6f6;
+    text-align:center;
+}
+
+.btn {
+
+    background: #ab9d9d;
+    border: 3px solid #ab9d9d;
+    border-radius: 30px;
+    padding: 0px 5px;
+    display: inline-block;
+    margin: 10px;
+    font-family:  "Arial Unicode MS", sans-serif;
+    color: #f7f6f6;
+    text-align:center;
+    font-size: 33px;
+    text-decoration: none;
+
+}
+
+ups {
+    background: #e50b0b;
+    border: 3px solid #e50b0b;
+    padding: 0px 5px;
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+    width: 100%;
+}
+
+input[type="text"] {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 8px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+
+input[type="email"] {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 8px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+
+input[type="password"] {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 8px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+
+.link {
+    color: #e50b0b;
+}
+
+.placeholder{
+    color: #dadada;
+}
+
+input[type="submit"] {
+    padding: 5px 50px;
+    border-radius: 4px;
+    border: 1px solid #e50b0b;
+    background: #e50b0b;
+    color: white;
+    font-size: 23px;
+    font-family:  "Arial Unicode MS", sans-serif;
+}
+input[type="text"] {
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    padding: 8px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+
+input[type="password"] {
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    padding: 8px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+
+p[type="messages"] {
+    font-weight: bold;
+    margin: 10px 0;
+    padding:12px;
+    color: #8f2121;
+    background-color: #FFD2D2;
+    width: auto;
+    display: inline-block;
+}
