@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import Http404
 from django.shortcuts import redirect, render
 
-from .forms import CreateUserForm
+from .forms import ProfileForm, UserForm
 # Create your views here.
 from .models import *
 
@@ -58,17 +58,20 @@ def registerPage(request):
     if request.user.is_authenticated:
         return redirect('/')
     else:
-        form = CreateUserForm()
+        user_form = UserForm()
+        profile_form = ProfileForm()
         if request.method == 'POST':
-            form = CreateUserForm(request.POST)
-            if form.is_valid():
-                form.save()
-                user = form.cleaned_data.get('username')
+            user_form = UserForm(request.POST, instance=request.user)
+            profile_form = ProfileForm(request.POST, instance=request.user.profile)
+            if user_form.is_valid() and profile_form.is_valid():
+                user_form.save()
+                profile_form.save()
+                user = user_form.cleaned_data.get('username')
                 return redirect('login')
             else:
                 messages.error(request, "Неудачная регистрация. Неверная информация")
 
-    context = {'form': form}
+    context = {'user_form': user_form, 'profile_form': profile_form}
     return render(request, 'register.html', context)
 
 

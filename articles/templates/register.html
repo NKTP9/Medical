@@ -15,12 +15,15 @@
     </p>
 </div>
 <div class="input">
-    <form method="post">
+    <form method="POST">
         {% csrf_token %}
-        {{form.username}}<br>
-        {{form.email}}<br>
-        {{form.password1}}<br>
-        {{form.password2}}<br>
+        {{user_form.as_p}}<br>
+{#        {{form.email}}<br>#}
+{#        {{form.password1}}<br>#}
+{#        {{form.password2}}<br>#}
+{#        {{form.last_name}}<br>#}
+{#        {{form.first_name}}<br>#}
+        {{profile_form.as_p}}<br>
         <br>
         <input type="submit" value="Регистрация">
     </form>
@@ -39,6 +42,8 @@
     form_fields[2].placeholder = 'E-Mail...';
     form_fields[3].placeholder = 'Пароль...';
     form_fields[4].placeholder = 'Подтверждение пароля...';
+    form_fields[5].placeholder = 'Фамилия...';
+    form_fields[6].placeholder = 'Имя...';
 
 
     for (var field in form_fields) {
