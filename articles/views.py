@@ -11,6 +11,9 @@ from .models import *
 def archive(request):
     return render(request, 'archive.html', {"posts": Article.objects.all()})
 
+def main(request):
+    return render(request, 'main.html')
+
 
 def get_article(request, article_id):
     try:
@@ -98,3 +101,4 @@ def loginPage(request):
 def logoutUser(request):
     logout(request)
     return redirect('login')
+
